@@ -1,0 +1,94 @@
+Determine, si corresponde, la ecuación de la(s) asíntota(s) vertical(es) de la función dada:
+
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\dfrac{\sqrt{4 x^2+2020}}{3 x-6}$
+  \item $f(x)=\dfrac{x^3-x}{x^2-6 x+5}$
+  \item $f(x)=\dfrac{-2 e^x}{e^x-5}$
+\end{enumerate}
+
+\begin{soluciones}
+  \subsubsection*{Solución}
+
+  \begin{enumerate}[label=\alph*)]
+    \item $f(x)=\dfrac{\sqrt{4 x^2+2020}}{3 x-6}$
+    
+    Note que el denominador de $f(x)$ es cero si $x=2$, por lo que la recta de ecuación $x=2$ es una posible asíntota vertical. El numerador es $\sqrt{2036}$, que es mayor que cero, y cuando $x$ tiende a 2 por la derecha $\left(2^{+}\right)$, la expresión $3 x-6$ toma valores positivos que tienden a cero. Entonces,
+
+    $$
+    \lim _{x \rightarrow 2^{+}} f(x)=\lim _{x \rightarrow 2^{+}} \frac{\sqrt{4 x^2+2020}}{3 x-6}=+\infty
+    $$
+
+    Así, la recta de ecuación $x=2$ es una asíntota vertical de $f$.
+    Además, debido a que cuando $x$ tiende a 2 por la izquierda $\left(2^{-}\right)$, la expresión $3 x-6$ toma valores negativos que tienden a cero, se tiene que
+
+    $$
+    \lim _{x \rightarrow 2^{-}} f(x)=\lim _{x \rightarrow 2^{-}} \frac{\sqrt{4 x^2+2020}}{3 x-6}=-\infty
+    $$
+
+    lo cual, también indica que la recta de ecuación $x=2$ es una asíntota vertical de la función $f$.
+
+    \item $f(x)=\dfrac{x^3-x}{x^2-6 x+5}$
+    
+    En este caso el denominador de la función racional dada se anula cuando $x=1$ y cuando $x=5$, por lo que las rectas de ecuación $x=1$ y $x=5$ son posibles asíntotas verticales.
+
+    Sin embargo, para el caso en el que $x=1$, se tiene que
+
+    $$
+    \begin{aligned}
+    \lim _{x \rightarrow 1} f(x) & =\lim _{x \rightarrow 1} \frac{x(x-1)(x+1)}{(x-1)(x-5)} \\
+    & =\lim _{x \rightarrow 1} \frac{(x-1)}{x-1} \frac{x(x+1)}{(x-5)} \\
+    & =\lim _{x \rightarrow 1} \frac{(x-1)}{(x-1)} \lim _{x \rightarrow 1} \frac{x(x+1)}{(x-5)} \\
+    & =1 \cdot\left(\frac{2}{-4}\right) \\
+    & =-\frac{1}{2}
+    \end{aligned}
+    $$
+
+    es decir, el límite es finito, por lo que la recta de ecuación $x=1$ no corresponde a una asíntota vertical de la función $f$.
+
+    Para el caso de $x=5$,
+
+    $$
+    \begin{aligned}
+    \lim _{x \rightarrow 5^{+}} f(x) & =\lim _{x \rightarrow 5^{+}} \frac{x(x-1)(x+1)}{(x-1)(x-5)} \\
+    & =\lim _{x \rightarrow 5^{+}} \frac{(x-1)}{(x-1)} \lim _{x \rightarrow 5^{+}} \frac{x(x+1)}{x-5} \\
+    & =1 \cdot \lim _{x \rightarrow 5^{+}} \frac{x(x+1)}{(x-5)} \\
+    & =\lim _{x \rightarrow 5^{+}} \frac{x(x+1)}{(x-5)} \\
+    & =\infty
+    \end{aligned}
+    $$
+
+    ya que cuando $x$ tiende a 5 por la derecha $\left(5^{+}\right)$, la expresión $x(x+1)$ tiende a 30 , que es mayor que cero, y la expresión $x-5$ toma valores positivos que tienden cero. Entonces, la recta de ecuación $x=5$ es una asíntota vertical de $f(x)$.
+
+    También, observe que
+
+    $$
+    \begin{aligned}
+    \lim _{x \rightarrow 5^{-}} f(x) & =\lim _{x \rightarrow 5^{-}} \frac{x(x-1)(x+1)}{(x-1)(x-5)} \\
+    & =\lim _{x \rightarrow 5^{+}} \frac{(x-1)}{(x-1)} \lim _{x \rightarrow 5^{+}} \frac{x(x+1)}{x-5} \\
+    & =1 \cdot \lim _{x \rightarrow 5^{-}} \frac{x(x+1)}{(x-5)} \\
+    & =\lim _{x \rightarrow 5^{-}} \frac{x(x+1)}{(x-5)} \\
+    & =-\infty
+    \end{aligned}
+    $$
+
+    ya que cuando $x$ tiende a 5 por la izquierda ($5^-$), la expresión $x(x+1)$ tiende a 30 , que es mayor que cero, y la expresión $x-5$ toma valores negativos que tienden cero.
+    El hecho de que el $\lim _{x \rightarrow 5^{-}} f(x)=-\infty$ también indica que la recta de ecuación $x=5$ es una asíntota vertical de $f$.
+
+    \item $f(x)=\dfrac{-2 e^x}{e^x-5}$
+    
+    Para esta función el denominador de $f(x)$ es cero si $x=\ln (5)$. El numerador es $-2 e^{\ln (5)}=-2 \cdot 5=-10$, que es menor que cero, entonces,
+
+    $$
+    \lim _{x \rightarrow\left((\ln (5))^{+}\right.} f(x)=\lim _{x \rightarrow\left((\ln (5))^{+}\right.} \frac{-2 e^x}{e^x-5}=-\infty
+    $$
+
+    ya que cuando $x$ tiende a $\ln (5)$ por la derecha $\left((\ln (5))^{+}\right)$, la expresión $e^x-5$ toma valores positivos que tienden a cero. Así, la recta de ecuacón $x=\ln (5)$ es una asíntota vertical de $f$.
+    Además,
+
+    $$
+    \lim _{x \rightarrow\left((\ln (5))^{-}\right.} f(x)=\lim _{x \rightarrow\left((\ln (5))^{-}\right.} \frac{-2 e^x}{e^x-5}=\infty
+    $$
+
+    ello debido a que cuando $x$ tiende a $\ln (5)$ por la izquierda $\left((\ln (5))^{-}\right)$, la expresión $e^x-5$ toma valores negativos que tienden a cero. Esto también indica que $x=\ln (5)$ es una asíntota vertical de $f$.
+  \end{enumerate}
+\end{soluciones}

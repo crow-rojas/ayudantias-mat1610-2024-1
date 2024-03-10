@@ -1,0 +1,85 @@
+Para la función $f(x)=\dfrac{\sqrt{x}-\sqrt{2}}{|x-2|}$, responda las siguientes preguntas:
+
+\begin{enumerate}[label=\alph*)]
+  \item Determine el valor de $\ds\lim _{x \rightarrow 0^{+}} f(x)$.
+  \item ¿Existe el $\ds\lim _{x \rightarrow 2} f(x)$? Justifique su respuesta. En caso afirmativo, ¿cuál es su valor?
+\end{enumerate}
+
+\begin{soluciones}
+  \subsubsection*{Solución}
+
+  Note que, el dominio de la función $f$ son los valores reales no negativos diferentes de 2 y que
+
+  $$
+  |x-2|=\left\{\begin{array}{lll}
+  x-2 & \text { si } & x \geq 2 \\
+  2-x & \text { si } & x<2
+  \end{array}\right.
+  $$
+  
+  entonces, la función $f$ puede escribirse como
+
+  $$
+  f(x)=\left\{\begin{array}{ccc}
+  \dfrac{\sqrt{x}-\sqrt{2}}{2-x} & \text { si } & 0 \leq x<2 \\[15pt]
+  \dfrac{\sqrt{x}-\sqrt{2}}{x-2} & \text { si } & x>2
+  \end{array}\right.
+  $$
+
+  o, equivalentemente, como
+
+  $$
+  f(x)=\left\{\begin{array}{lcc}
+  \dfrac{1}{-(\sqrt{x}+\sqrt{2})} & \text { si } & 0 \leq x<2 \\[15pt]
+  \dfrac{1}{\sqrt{x}+\sqrt{2}} & \text { si } & x>2
+  \end{array}\right.
+  $$
+
+  ya que
+
+  $$
+  2-x=(\sqrt{2}-\sqrt{x})(\sqrt{2}+\sqrt{x})=-(\sqrt{x}-\sqrt{2})(\sqrt{x}+\sqrt{2})
+  $$
+
+  y luego
+
+  $$
+  x-2=(\sqrt{x}-\sqrt{2})(\sqrt{x}+\sqrt{2})
+  $$
+
+  Así,
+
+  $$
+  \begin{aligned}
+  \lim _{x \rightarrow 0^{+}} f(x) & =\lim _{x \rightarrow 0^{+}} \frac{1}{-(\sqrt{x}+\sqrt{2})} \\
+  & =\frac{\lim _{x \rightarrow 0} 1}{-\left(\lim _{x \rightarrow 0^{+}} \sqrt{x}+\lim _{x \rightarrow 0} \sqrt{2}\right)} \\
+  & =\frac{1}{-(0+\sqrt{2})} \\
+  & =-\frac{1}{\sqrt{2}} \\
+  & =-\frac{\sqrt{2}}{2}
+  \end{aligned}
+  $$
+
+  Para la parte b) se estudian los límites laterales
+
+  $$
+  \begin{aligned}
+  \lim _{x \rightarrow 2^{-}} f(x) & =\lim _{x \rightarrow 2^{-}} \frac{1}{-(\sqrt{x}+\sqrt{2})} \\
+  & =\frac{\lim _{x \rightarrow 0} 1}{-\left(\lim _{x \rightarrow 2^{-}} \sqrt{x}+\lim _{x \rightarrow 2^{-}} \sqrt{2}\right)} \\
+  & =\frac{1}{-(\sqrt{2}+\sqrt{2})} \\
+  & =-\frac{1}{2 \sqrt{2}} \\
+  & =-\frac{\sqrt{2}}{4}
+  \end{aligned}
+  $$
+
+  $$
+  \begin{aligned}
+  \lim _{x \rightarrow 2^{+}} f(x) & =\lim _{x \rightarrow 2^{+}} \frac{1}{\sqrt{x}+\sqrt{2}} \\
+  & =\frac{\lim _{x \rightarrow 0} 1}{\lim _{x \rightarrow 2^{+}} \sqrt{x}+\lim _{x \rightarrow 2^{+}} \sqrt{2}} \\
+  & =\frac{1}{\sqrt{2}+\sqrt{2}} \\
+  & =\frac{1}{2 \sqrt{2}} \\
+  & =\frac{\sqrt{2}}{4}
+  \end{aligned}
+  $$
+
+  Entonces, como $\lim _{x \rightarrow 2^{+}} f(x) \neq \lim _{x \rightarrow 2^{-}} f(x)$, el $\lim _{x \rightarrow 2} f(x)$ no existe.
+\end{soluciones}

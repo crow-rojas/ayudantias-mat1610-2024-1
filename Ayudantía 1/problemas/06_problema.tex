@@ -1,0 +1,42 @@
+Estudie si cada uno de los límites indicados existe o no. Si existe, determine su valor, en caso contrario, explique por qué:
+
+\begin{enumerate}[label=\alph*)]
+  \item $\ds\lim _{x \rightarrow 4} \dfrac{5-\sqrt{9+x^2}}{1-\sqrt{5-x}}$
+  \item $\ds\lim _{x \rightarrow 0} \dfrac{x}{\sqrt[3]{x-27}+3}$
+\end{enumerate}
+
+\begin{soluciones}
+  \subsubsection*{Solución}
+
+  \begin{enumerate}[label=\alph*)]
+    \item $\ds\lim _{x \rightarrow 4} \dfrac{5-\sqrt{9+x^2}}{1-\sqrt{5-x}}$
+    
+    Note que no se puede determinar el límite por sustitución porque si $f(x)=\dfrac{5-\sqrt{9+x^2}}{1-\sqrt{5-x}}, f(4)$ no está definida. Para calcularlo se realizan, previamente, varias operaciones algebraicas.
+
+    $$
+    \begin{aligned}
+    \lim _{x \rightarrow 4} \frac{5-\sqrt{9+x^2}}{1-\sqrt{5-x}} & =\lim _{x \rightarrow 4} \frac{\left(5-\sqrt{9+x^2}\right)\left(5+\sqrt{9+x^2}\right)(1+\sqrt{5-x})}{(1-\sqrt{5-x})(1+\sqrt{5-x})\left(5+\sqrt{9+x^2}\right)} \\
+    & =\lim _{x \rightarrow 4} \frac{\left(16-x^2\right)}{(x-4)} \lim _{x \rightarrow 4} \frac{(1+\sqrt{5-x})}{\left(5+\sqrt{9+x^2}\right)} \\
+    & =\lim _{x \rightarrow 4} \frac{(4-x)(4+x)}{(x-4)} \lim _{x \rightarrow 4} \frac{(1+\sqrt{5-x})}{\left(5+\sqrt{9+x^2}\right)} \\
+    & =\lim _{x \rightarrow 4} \frac{(4-x)}{(x-4)} \lim _{x \rightarrow 4}(4+x) \lim _{x \rightarrow 4} \frac{(1+\sqrt{5-x})}{\left(5+\sqrt{9+x^2}\right)} \\
+    & =(-1) 8 \frac{2}{10} \\
+    & =-\frac{8}{5}
+    \end{aligned}
+    $$
+
+    \item $\ds\lim _{x \rightarrow 0} \dfrac{x}{\sqrt[3]{x-27}+3}$
+    
+    Al considerar $f(x)=\dfrac{x}{\sqrt[3]{x-27}+3}, f(0)$ no está definida, por lo tanto, no se puede determinar el límite por sustitución. Para calcularlo se realizan, previamente, varias operaciones algebraicas.
+
+    $$
+    \begin{aligned}
+    \lim _{x \rightarrow 0} \frac{x}{\sqrt[3]{x-27}+3} & =\lim _{x \rightarrow 0} \frac{x\left((\sqrt[3]{x-27})^2-3 \sqrt[3]{x-27}+3^2\right)}{(\sqrt[3]{x-27}+3)\left((\sqrt[3]{x-27})^2-3 \sqrt[3]{x-27}+3^2\right)} \\
+    & =\lim _{x \rightarrow 0} \frac{x\left((\sqrt[3]{x-27})^2-3 \sqrt[3]{x-27}+9\right)}{(\sqrt[3]{x-27})^3+3^3} \\
+    & =\lim _{x \rightarrow 0} \frac{x\left((\sqrt[3]{x-27})^2-3 \sqrt[3]{x-27}+9\right)}{x} \\
+    & =\lim _{x \rightarrow 0} \frac{x}{x} \lim _{x \rightarrow 0}\left((\sqrt[3]{x-27})^2-3 \sqrt[3]{x-27}+9\right) \\
+    & =1 \cdot\left((-3)^2-3(-3)+9\right) \\
+    & =27
+    \end{aligned}
+    $$
+  \end{enumerate}
+\end{soluciones}
